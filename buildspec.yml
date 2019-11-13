@@ -6,7 +6,7 @@ phases:
       docker: 18
   pre_build:
     commands:
-      - echo Logging in to Nexus...
+      - echo Logging in to ECR...
       - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
