@@ -19,6 +19,8 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $IMAGE_REPO_NAME
+      - echo updating artifact file
+      - ./update_artifact.sh
 artifacts:
   files:
     - imagedefinitions.json
